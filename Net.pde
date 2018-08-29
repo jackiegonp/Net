@@ -4,7 +4,7 @@ PVector[] dots;
 
 void setup () {
   size(600, 600);
-
+  noStroke();
   dots = new PVector[nDots]; 
   for (int i = 0; i < nDots; i++) {
     dots[i] = new PVector(random(0, width), random(0, height));
@@ -32,6 +32,10 @@ void updateDots() {
 
 void renderDots() {
   for (int i = 0; i < nDots; i++) {
+    fill(#000EFF);
     ellipse(dots[i].x, dots[i].y, 6, 6);
+    
+    fill(#FFB9E7, 50);
+    ellipse(dots[i].x, dots[i].y, 30, 30);
   }
 }
